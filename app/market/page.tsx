@@ -30,7 +30,7 @@ const Market = () => {
             height={400}
             className="w-full h-[211px] rounded-xl object-cover"
           />
-          <h1 className="absolute inset-0 flex items-center justify-center text-white text-5xl font-bold drop-shadow-lg">
+          <h1 className="absolute inset-0 flex items-center text-center justify-center text-white text-5xl font-bold drop-shadow-lg">
             Future Trading
           </h1>
         </div>
@@ -64,18 +64,20 @@ const Market = () => {
           </div>
 
           {/* Rates */}
-          <div className="flex flex-wrap gap-3 text-gray-700">
+          <div className="flex flex-wrap gap-3 text-[#555555] text-base font-semibold">
             <span>USD/EUR: {rates.usdToEur}</span>
             <span>BTC: ${rates.btc.toLocaleString()}</span>
             <span>ETH: ${rates.eth.toLocaleString()}</span>
           </div>
         </div>
-        <div className="flex items-start gap-3 mx-2">
+        <div className="flex md:flex-row flex-col items-start gap-3 mx-2">
           <TradeCard />
-          <div className=" w-[630px] bg-[#d9d9d9] p-5 mb-5 rounded-xl">
+          <div className=" w-full max-w-[630px] bg-[#d9d9d9] p-5 mb-5 rounded-xl">
             <div className="flex items-center justify-between mb-5">
               <div>
-                <h1>BTC/USD Live Chart</h1>
+                <h1 className=" font-medium text-[#555555] text-base">
+                  BTC/USD Live Chart
+                </h1>
               </div>
               <div className="flex items-center gap-1">
                 <button className=" w-[33px] h-[33px] cursor-pointer flex items-center justify-center rounded-xl bg-[#555555] text-white">
@@ -96,7 +98,7 @@ const Market = () => {
           </div>
         </div>
         <div className="overflow-x-auto overflow-y-hidden no-scrollbar mt-5 mx-5">
-          <table className="w-full  text-sm text-gray-700">
+          <table className="w-full text-gray-700 min-w-[900px]">
             <thead className="">
               <tr className="bg-[#393518] text-white h-[65px] border-b-8">
                 <th className="px-2 py-2 ">Time</th>
