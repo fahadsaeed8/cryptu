@@ -30,10 +30,10 @@ const ReactPopUp = ({ children, popupContent }: ReactPopUpProps) => {
         overlayStyle={{ background: "transparent", pointerEvents: "none" }}
         contentStyle={{
           padding: 0,
-          margin: 0, // ✨ extra margin hata do
+          margin: 0,
           border: "none",
-          borderRadius: 0, // ✨ rounded edges remove
-          boxShadow: "none", // ✨ shadow remove
+          borderRadius: 0,
+          boxShadow: "none",
           background: "transparent",
         }}
       >
