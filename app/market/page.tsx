@@ -10,7 +10,6 @@ const Market = () => {
   const [language, setLanguage] = useState("EN");
   const [isOpen, setIsOpen] = useState(false);
 
-  // Mock data for rates
   const rates = {
     usdToEur: 0.92,
     btc: 43250,
@@ -21,7 +20,7 @@ const Market = () => {
 
   return (
     <DashboardLayout>
-      <div className=" bg-white">
+      <div className="bg-white   rounded-xl pb-15">
         <div className="w-full relative">
           <Image
             src="/trading.jpg"
@@ -38,7 +37,7 @@ const Market = () => {
           {/* Language Dropdown */}
           <div className="relative">
             <button
-              className=" border rounded-xl gap-5 h-[40px] w-[100px] flex items-center justify-center bg-[#f1f1f1] hover:bg-gray-50"
+              className=" border rounded-xl gap-5 h-[40px] w-[100px] flex items-center justify-center bg-[#D9D9D9] hover:bg-gray-50"
               onClick={() => setIsOpen(!isOpen)}
             >
               {language}
