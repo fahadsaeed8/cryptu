@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function TradeLog() {
   return (
     <DashboardLayout>
-      <div className=" no-scrollbar flex flex-col items-center py-1 bg-white">
+      <div className=" no-scrollbar flex flex-col rounded-xl items-center bg-white">
         {/* Header Banner */}
         <div className="w-full relative">
           <Image

@@ -1,15 +1,16 @@
 "use client";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-
 import NotificationPopUp from "@/components/popup/notification-popup";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <>
-      <div className="w-full bg-white px-4 py-[23px] flex items-center justify-between text-white relative">
+    <div className=" bg-[#F1F1F1]">
+      {" "}
+      {/* Parent Background */}
+      <div className="w-full bg-white rounded-br-[20px] px-4 py-[23px] flex items-center justify-between text-white relative">
         {/* Left Section - Mobile Menu and Locations */}
         <div className="flex items-center gap-2">
           {/* Mobile Menu Button */}
@@ -33,6 +34,6 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

@@ -90,7 +90,7 @@ const TradeCard: React.FC = () => {
           <button
             key={idx}
             onClick={() => setSelectedOption(`${opt.label} - ${opt.time}`)}
-            className={`border-2 rounded-md px-3 py-2 cursor-pointer text-center text-[#555555] w-[167px] h-[71px] ${
+            className={`border-3 rounded-[10px] px-3 py-2 cursor-pointer text-center text-[#555555] w-[167px] h-[71px] ${
               selectedOption === `${opt.label} - ${opt.time}`
                 ? "bg-[#acd3ab]"
                 : "hover:bg-gray-100"
@@ -103,7 +103,7 @@ const TradeCard: React.FC = () => {
       </div>
 
       {/* Asset Info */}
-      <div className="flex justify-between items-center border-2 border-[#555555] rounded-md px-3 py-2">
+      <div className="flex justify-between items-center border-3 rounded-[10px] border-[#555555] px-3 py-2">
         <div className="flex items-center gap-2">
           <span className="flex items-center gap-x-1 text-base font-medium text-[#555555]">
             {" "}

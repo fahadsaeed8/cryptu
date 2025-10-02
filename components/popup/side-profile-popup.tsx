@@ -1,7 +1,6 @@
 "use client";
-
 import React from "react";
-import { EllipsisVertical, List, Lock, LogOut, Settings } from "lucide-react";
+import { List, Lock, Settings } from "lucide-react";
 import Image from "next/image";
 import ReactPopUp from "../common/react-popup";
 

@@ -235,7 +235,7 @@ export default function Sidebar() {
 
         {/* Menu Items */}
         <div className="p-2 ">
-          <ul className="space-y-1 bg-white p-4 !rounded-[14px]">
+          <ul className="-mt-2 bg-white  p-4 !rounded-[14px]">
             {renderMenu(menuItems)}
           </ul>
         </div>

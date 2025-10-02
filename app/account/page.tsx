@@ -18,7 +18,7 @@ const Account = () => {
   ];
   return (
     <DashboardLayout>
-      <div className=" bg-white h-screen">
+      <div className=" bg-white h-screen rounded-xl">
         <div className=" p-6">
           <h2 className="mb-6 text-[32px] font-medium text-[#555555]">
             User Profile
@@ -27,9 +27,9 @@ const Account = () => {
           <div className="space-y-4">
             {profileData.map((item, idx) => (
               <div key={idx} className="flex items-center space-x-3">
-                <FaUser className="w-[32px] h-[32px]" />
+                <FaUser className="w-[21px] h-[21px]" />
                 <div>
-                  <p className=" text-base font-medium text-[#555555]">
+                  <p className=" text-[14px] font-medium text-[#555555]">
                     {item.label}
                   </p>
                   <p className=" text-xl font-medium text-[#555555]">

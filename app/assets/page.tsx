@@ -19,7 +19,7 @@ const Assets = () => {
             <img src="/assestinside.png" alt="" />
           </div>
         </div>
-        <div className="bg-gray-200 rounded-md p-4 w-full max-w-[700px] min-h-[250px] h-full mx-auto text-center shadow my-4">
+        <div className="bg-[#D9D9D9] rounded-md p-4 w-full max-w-[700px] min-h-[250px] h-full mx-auto text-center shadow my-4">
           {/* Header */}
           <h2 className="text-2xl font-medium text-[#555555]">Total Assets</h2>
           <p className="text-2xl leading-none md:text-[48px] font-medium text-[#555555] mt-2">

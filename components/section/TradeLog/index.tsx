@@ -1,9 +1,6 @@
-import { div } from "framer-motion/client";
-import Market from "../market-dashboard";
-
 export default function TradeLog() {
   return (
-    <div className=" bg-white pb-10 ">
+    <div className=" bg-white rounded-xl pb-10 ">
       <div className="relative w-full max-h-[273px] h-full rounded-lg overflow-hidden">
         {/* Background Image */}
         <img
@@ -14,10 +11,6 @@ export default function TradeLog() {
 
         {/* Centered Text */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
-          {/* <h1 className="text-6xl font-bold">Dashboard</h1>
-          <p className=" text-lg font-medium">
-            Real-time Cryptocurrency Market
-          </p> */}
           <img src="/dashboardimg.png" alt="" />
         </div>
       </div>
@@ -30,7 +23,7 @@ export default function TradeLog() {
           {Array(6)
             .fill(null)
             .map((_, i) =>
-              i % 2 === 0 ? ( // har 2 items ke liye ek row
+              i % 2 === 0 ? (
                 <div
                   key={i}
                   className={`grid grid-cols-1 sm:grid-cols-2 ${
@@ -38,7 +31,7 @@ export default function TradeLog() {
                   }`}
                 >
                   {[i, i + 1].map((j) =>
-                    j < 6 ? ( // index valid hona chahiye
+                    j < 6 ? (
                       <div
                         key={j}
                         className="flex items-center gap-2 w-full xl:w-[487px] py-2"
@@ -50,18 +43,18 @@ export default function TradeLog() {
                         />
                         <div className="flex justify-between w-full">
                           <div className="flex flex-col">
-                            <h1 className="text-[#555555] text-lg leading-none font-medium">
+                            <h1 className="text-[#555555] text-[20px] leading-none font-medium">
                               Bitcoin
                             </h1>
-                            <h1 className="text-[#555555] text-lg leading-none font-medium">
+                            <h1 className="text-[#555555] mt-1 text-[16px] leading-none font-medium">
                               BTC
                             </h1>
                           </div>
                           <div className="flex flex-col items-end mr-4">
-                            <h1 className="text-[#555555] text-lg leading-none font-medium">
+                            <h1 className="text-[#555555] text-[20px] leading-none font-medium">
                               $ 245,450
                             </h1>
-                            <h1 className="text-[#555555] text-lg leading-none font-medium">
+                            <h1 className="text-[#555555] text-[16px] leading-none font-medium">
                               +3.20
                             </h1>
                           </div>
