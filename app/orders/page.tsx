@@ -19,14 +19,14 @@ export default function TradeLog() {
           </h1>
         </div>
 
-        <div className="w-full max-w-6xl p-4">
+        <div className="w-full max-w-6xl p-2 md:p-4">
           {/* Running Order Section */}
           <div className="mb-6">
-            <h2 className=" bg-[#d9d9d9] w-fit rounded-xl text-[20px] px-1 py-1 font-semibold mb-[7px]">
+            <h2 className=" bg-[#d9d9d9] w-fit rounded-[12px] text-[20px] px-2 py-1 font-semibold mb-[7px]">
               Running Order
             </h2>
             <div className="overflow-x-auto overflow-y-hidden no-scrollbar">
-              <table className="w-full  text-sm text-gray-700">
+              <table className="w-full text-[#555555] min-w-[900px]">
                 <thead className="">
                   <tr className="bg-[#393518] text-white h-[65px] border-b-8">
                     <th className="px-2 py-2 ">S.N</th>
@@ -42,14 +42,31 @@ export default function TradeLog() {
                   {Array(5)
                     .fill(null)
                     .map((_, idx) => (
-                      <tr key={idx} className="bg-[#d9d9d9] text-center h-[47px]">
-                        <td className="border-b-2 border-white px-2 py-2">{idx + 1}</td>
-                        <td className="border-b-2 border-white px-2 py-2">Crypto Currency</td>
-                        <td className="border-b-2 border-white px-2 py-2">Amount</td>
-                        <td className="border-b-2 border-white px-2 py-2">Direction</td>
-                        <td className="border-b-2 border-white px-2 py-2">Result</td>
-                        <td className="border-b-2 border-white px-2 py-2">Status</td>
-                        <td className="border-b-2 border-white px-2 py-2">Date</td>
+                      <tr
+                        key={idx}
+                        className="bg-[#d9d9d9] text-center h-[47px]"
+                      >
+                        <td className="border-b-2 border-white px-2 py-2">
+                          {idx + 1}
+                        </td>
+                        <td className="border-b-2 border-white px-2 py-2">
+                          Crypto Currency
+                        </td>
+                        <td className="border-b-2 border-white px-2 py-2">
+                          Amount
+                        </td>
+                        <td className="border-b-2 border-white px-2 py-2">
+                          Direction
+                        </td>
+                        <td className="border-b-2 border-white px-2 py-2">
+                          Result
+                        </td>
+                        <td className="border-b-2 border-white px-2 py-2">
+                          Status
+                        </td>
+                        <td className="border-b-2 border-white px-2 py-2">
+                          Date
+                        </td>
                       </tr>
                     ))}
                 </tbody>
@@ -59,11 +76,11 @@ export default function TradeLog() {
 
           {/* Closed Order Section */}
           <div className=" mb-10">
-            <h2 className="bg-[#d9d9d9] w-fit rounded-xl text-[20px] px-1 py-1 font-semibold mb-[7px]">
+            <h2 className="bg-[#d9d9d9] w-fit rounded-[12px] text-[20px] px-2 py-1 font-semibold mb-[7px]">
               Closed Order
             </h2>
             <div className="overflow-x-auto">
-              <table className="w-full text-sm text-gray-700">
+              <table className="w-full text-[#555555] min-w-[900px]">
                 <thead>
                   <tr className="bg-[#393518] text-white h-[65px] border-b-8">
                     <th className="px-2 py-2">S.N</th>
@@ -81,16 +98,37 @@ export default function TradeLog() {
                   {Array(5)
                     .fill(null)
                     .map((_, idx) => (
-                      <tr key={idx} className="bg-[#d9d9d9] text-center h-[47px]">
-                        <td className="border-b-2 border-white px-2 py-2">{idx + 1}</td>
-                        <td className="border-b-2 border-white px-2 py-2">Crypto Currency</td>
-                        <td className="border-b-2 border-white px-2 py-2">Amount</td>
-                        <td className="border-b-2 border-white px-2 py-2">Direction</td>
-                        <td className="border-b-2 border-white px-2 py-2">Leverage</td>
-                        <td className="border-b-2 border-white px-2 py-2">Result</td>
-                        <td className="border-b-2 border-white px-2 py-2">Profit/Loss</td>
-                        <td className="border-b-2 border-white px-2 py-2">Status</td>
-                        <td className="border-b-2 border-white px-2 py-2">Date</td>
+                      <tr
+                        key={idx}
+                        className="bg-[#d9d9d9] text-center h-[47px]"
+                      >
+                        <td className="border-b-2 border-white px-2 py-2">
+                          {idx + 1}
+                        </td>
+                        <td className="border-b-2 border-white px-2 py-2">
+                          Crypto Currency
+                        </td>
+                        <td className="border-b-2 border-white px-2 py-2">
+                          Amount
+                        </td>
+                        <td className="border-b-2 border-white px-2 py-2">
+                          Direction
+                        </td>
+                        <td className="border-b-2 border-white px-2 py-2">
+                          Leverage
+                        </td>
+                        <td className="border-b-2 border-white px-2 py-2">
+                          Result
+                        </td>
+                        <td className="border-b-2 border-white px-2 py-2">
+                          Profit/Loss
+                        </td>
+                        <td className="border-b-2 border-white px-2 py-2">
+                          Status
+                        </td>
+                        <td className="border-b-2 border-white px-2 py-2">
+                          Date
+                        </td>
                       </tr>
                     ))}
                 </tbody>
