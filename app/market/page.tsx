@@ -5,6 +5,8 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import TradeCard from "@/components/section/trade-card";
+import ChartBTC from "@/components/section/ChartBTC";
+import BitcoinChart from "@/components/section/BitcoinCart";
 
 const Market = () => {
   const [language, setLanguage] = useState("EN");
@@ -72,29 +74,10 @@ const Market = () => {
         <div className="flex md:flex-row flex-col items-start gap-3 mx-2">
           <TradeCard />
           <div className=" w-full max-w-[630px] bg-[#d9d9d9] p-5 mb-5 rounded-xl">
-            <div className="flex items-center justify-between mb-5">
-              <div>
-                <h1 className=" font-medium text-[#555555] text-base">
-                  BTC/USD Live Chart
-                </h1>
-              </div>
-              <div className="flex items-center gap-1">
-                <button className=" w-[33px] h-[33px] cursor-pointer flex items-center justify-center rounded-xl bg-[#555555] text-white">
-                  1D
-                </button>
-                <button className="w-[33px] h-[33px] cursor-pointer flex items-center justify-center rounded-xl text-white bg-[#9f9f9f]">
-                  1W
-                </button>
-                <button className="w-[33px] h-[33px] cursor-pointer flex items-center justify-center rounded-xl text-white bg-[#555555]">
-                  1M
-                </button>
-                <button className="w-[33px] h-[33px] cursor-pointer flex items-center justify-center rounded-xl text-white bg-[#555555]">
-                  1Y
-                </button>
-              </div>
-            </div>
-            <img src="/candles.png" alt="" />
+            <ChartBTC />{" "}
           </div>
+
+          {/* <BitcoinChart /> */}
         </div>
         <div className="overflow-x-auto overflow-y-hidden no-scrollbar mt-5 mx-5">
           <table className="w-full text-gray-700 min-w-[900px]">
