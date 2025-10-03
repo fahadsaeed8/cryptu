@@ -1,3 +1,5 @@
+import BitcoinChart from "../BitcoinCart";
+
 export default function TradeLog() {
   return (
     <div className=" bg-white rounded-xl pb-10 ">
@@ -67,7 +69,7 @@ export default function TradeLog() {
             )}
         </div>
       </section>
-      <section>
+      {/* <section>
         <div className=" bg-[#404040] p-5 mb-5 rounded-xl mx-5 ">
           <div className="flex items-center justify-between mb-5">
             <div>
@@ -92,7 +94,8 @@ export default function TradeLog() {
             </button>
           </div>
         </div>
-      </section>
+      </section> */}
+      <BitcoinChart />
     </div>
   );
 }
