@@ -75,7 +75,10 @@ export default function Login() {
             loginType === "email" ? emailLoginSchema : phoneLoginSchema
           }
           onSubmit={(values) => {
-            // submit handler logic
+            // ✅ Form submission logic here
+            console.log("Form submitted:", values);
+            // Example redirect after successful login
+            router.push("/");
           }}
         >
           {() => (
@@ -109,7 +112,11 @@ export default function Login() {
                         onClick={() => setShowPassword((prev) => !prev)}
                         className="absolute inset-y-0 right-3 cursor-pointer flex items-center text-gray-500 hover:text-gray-700"
                       >
-                        {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                        {showPassword ? (
+                          <EyeOff size={18} />
+                        ) : (
+                          <Eye size={18} />
+                        )}
                       </button>
                     </div>
                     <ErrorMessage
@@ -155,21 +162,21 @@ export default function Login() {
                   />
 
                   <p className="text-[15px] text-center text-gray-700  w-full max-w-[615px] mt-2">
-                    Texts are automated and consent is optional, not a
-                    condition of purchase. Message and data rates may apply.{" "}
-                    <a
-                      href="/terms"
+                    Texts are automated and consent is optional, not a condition
+                    of purchase. Message and data rates may apply.{" "}
+                    <Link
+                      href="#"
                       className="cursor-pointer text-[#70aff2] underline"
                     >
                       Terms
-                    </a>{" "}
+                    </Link>{" "}
                     .{" "}
-                    <a
-                      href="/policy"
+                    <Link
+                      href="#"
                       className="cursor-pointer text-[#70aff2] underline"
                     >
                       Privacy apply
-                    </a>
+                    </Link>
                   </p>
                 </div>
               )}
@@ -179,7 +186,7 @@ export default function Login() {
                   type="submit"
                   className="w-full max-w-[240px] h-[42px] flex items-center justify-center bg-gray-800 hover:bg-gray-700 text-white text-xl font-extrabold rounded-lg cursor-pointer shadow-md transition-all"
                 >
-                  <Link href={"/"}>Login</Link>
+                  Login
                 </button>
               </div>
             </Form>
