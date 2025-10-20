@@ -1,5 +1,6 @@
 "use client";
 
+import { CandlestickChart } from "lucide-react";
 import React, { useEffect, useState } from "react";
 
 type Crypto = {
@@ -37,9 +38,10 @@ const MarketSection: React.FC = () => {
   return (
     <section className="border border-[#8E8E93] border-t-0 rounded-xl m-5">
       {/* Header */}
-      <div className="flex items-center border border-x-0 border-[#8E8E93] rounded-[12px] h-[52px] px-5 gap-2">
-        <img src="/market.png" alt="market icon" />
-        <h1 className="text-[24px] text-[#555555] font-medium">Market</h1>
+      <div className="flex items-center bg-[#fdc857] border border-x-0 border-[#8E8E93] rounded-[12px] h-[52px] px-5 gap-2">
+        {/* <img src="/market.png" alt="market icon" /> */}
+        <CandlestickChart className=" text-gray-800"/>
+        <h1 className="text-[24px] text-gray-800  font-medium">Market</h1>
       </div>
 
       {/* Content */}
