@@ -86,9 +86,7 @@ export default function Sidebar() {
             className={`flex items-center justify-between w-full px-4 py-2 rounded-md text-sm transition ${
               isActive(item.link)
                 ? `${
-                    level === 0
-                      ? "bg-blue-100 text-[#2F80ED]"
-                      : "text-[#2F80ED]"
+                    level === 0 ? "bg-yellow-500 text-white" : "text-white"
                   } active-menu-item`
                 : "hover:bg-white/10 text-black font-medium"
             }`}
@@ -220,7 +218,7 @@ export default function Sidebar() {
         </div>
 
         {/* User Profile */}
-        <div className="bg-white pt-4 px-4 rounded-bl-[20px] ">
+        <div className="bg-[#fdc857] pt-4 px-4 rounded-bl-[20px] ">
           <div className="w-full flex justify-between items-center pb-4 mb-4">
             <div className="flex gap-2 items-center ">
               <Image
@@ -240,12 +238,12 @@ export default function Sidebar() {
 
         {/* Menu Items */}
         <div className="p-2 flex flex-col justify-between h-[calc(110%-150px)]">
-          <ul className="-mt-2 bg-white p-4 rounded-[14px] overflow-y-auto">
+          <ul className="-mt-2 bg-[#fdc857]  p-4 rounded-[14px] overflow-y-auto">
             {renderMenu(menuItems)}
           </ul>
 
           {/* Logout Button (fixed at bottom) */}
-          <div className="mt-4 px-4 py-2 bg-white rounded-[14px] shadow-sm">
+          <div className="mt-4 px-4 py-2 bg-[#fdc857] rounded-[14px] shadow-sm">
             <button
               onClick={handleLogout}
               className="flex items-center cursor-pointer justify-center w-full gap-2 text-red-600 font-semibold hover:bg-red-100 transition py-2 rounded-md"

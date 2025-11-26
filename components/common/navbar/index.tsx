@@ -10,7 +10,7 @@ export default function Navbar() {
     <div className=" bg-[#F1F1F1]">
       {" "}
       {/* Parent Background */}
-      <div className="w-full bg-white rounded-br-[20px] px-4 py-[23px] flex items-center justify-between text-white relative">
+      <div className="w-full bg-[#fdc857] rounded-br-[20px] px-4 py-[23px] flex items-center justify-between text-white relative">
         {/* Left Section - Mobile Menu and Locations */}
         <div className="flex items-center gap-2">
           {/* Mobile Menu Button */}

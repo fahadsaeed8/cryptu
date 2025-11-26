@@ -1,64 +1,10 @@
-// import DashboardLayout from "@/components/dashboardLayout";
-// import React from "react";
-// import { FaUser } from "react-icons/fa";
-
-// const Account = () => {
-//   interface ProfileField {
-//     label: string;
-//     value: string;
-//   }
-
-//   const profileData: ProfileField[] = [
-//     { label: "Name", value: "John Doe" },
-//     { label: "Email", value: "test@gmail.com" },
-//     { label: "Username", value: "@johndoe" },
-//     { label: "Balance", value: "INR 345" },
-//     { label: "Credit Score", value: "2345" },
-//     { label: "Level", value: "Premium" },
-//   ];
-//   return (
-//     <DashboardLayout>
-//       <div className=" bg-white h-screen rounded-xl">
-//         <div className=" p-6">
-//           <h2 className="mb-6 text-[32px] font-medium text-[#555555]">
-//             User Profile
-//           </h2>
-
-//           <div className="space-y-4">
-//             {profileData.map((item, idx) => (
-//               <div key={idx} className="flex items-center space-x-3">
-//                 <FaUser className="w-[21px] h-[21px]" />
-//                 <div>
-//                   <p className=" text-[14px] font-medium text-[#555555]">
-//                     {item.label}
-//                   </p>
-//                   <p className=" text-xl font-medium text-[#555555]">
-//                     {item.value}
-//                   </p>
-//                 </div>
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-//       </div>
-//     </DashboardLayout>
-//   );
-// };
-
-// export default Account;
 "use client";
 
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import DashboardLayout from "@/components/dashboardLayout";
-import {
-  CornerRightUp,
-  Mail,
-  Star,
-  User2,
-  Wallet,
-} from "lucide-react";
+import { CornerRightUp, Mail, Star, User2, Wallet } from "lucide-react";
 
 export default function ProfilePage() {
   const [activeSection, setActiveSection] = useState<"email" | "edit" | "none">(
@@ -99,7 +45,9 @@ export default function ProfilePage() {
       <div className="min-h-screenflex items-center justify-center">
         <div className="bg-white w-full max-w-5xl rounded-xl shadow-md p-6">
           <div className=" mb-7">
-            <h1 className="text-[#6c757d] font-semibold text-3xl">User Profile</h1>
+            <h1 className="text-[#6c757d] font-semibold text-3xl">
+              User Profile
+            </h1>
           </div>
           <div className="flex flex-col md:flex-row gap-6">
             {/* Left Info Section */}
@@ -155,7 +103,9 @@ export default function ProfilePage() {
               <div className="flex flex-wrap gap-3">
                 <button
                   onClick={() =>
-                    setActiveSection(activeSection === "email" ? "none" : "email")
+                    setActiveSection(
+                      activeSection === "email" ? "none" : "email"
+                    )
                   }
                   className="bg-[#fdc857] cursor-pointer text-white px-4 py-2 rounded-md hover:bg-yellow-500 transition"
                 >
