@@ -178,7 +178,7 @@ export default function Sidebar() {
     // Example logout logic:
     // remove auth token, clear localStorage, redirect to login page
     localStorage.removeItem("token");
-    window.location.href = "/login";
+    window.location.href = "/auth/login";
   };
 
   return (
