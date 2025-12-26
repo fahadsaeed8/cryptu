@@ -100,7 +100,6 @@ const tradeData: Trade[] = [
   },
 ];
 
-
 const Market = () => {
   const [language, setLanguage] = useState("EN");
   const [isOpen, setIsOpen] = useState(false);
@@ -128,31 +127,31 @@ const Market = () => {
             Future Trading
           </h1>
         </div> */}
-         {/* Fixed Background Section */}
-      <div className="relative w-full h-[350px] rounded-lg overflow-hidden">
-        {/* Fixed Background Image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-fixed"
-          style={{
-            backgroundImage: "url('/glassesimg.jpg')",
-          }}
-        ></div>
+        {/* Fixed Background Section */}
+        <div className="relative w-full h-[350px] rounded-lg overflow-hidden">
+          {/* Fixed Background Image */}
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-fixed"
+            style={{
+              backgroundImage: "url('/glassesimg.jpg')",
+            }}
+          ></div>
 
-        {/* Centered Text/Image that scrolls over background */}
-        <div className="relative z-10 flex flex-col items-center justify-center h-full text-white">
-          {/* <img
+          {/* Centered Text/Image that scrolls over background */}
+          <div className="relative z-10 flex flex-col items-center justify-center h-full text-white">
+            {/* <img
             src="/dashboardimg.png"
             alt="Overlay"
             className="w-auto h-auto"
           /> */}
-           <h1 className="flex items-center text-center justify-center text-white text-5xl font-bold drop-shadow-lg">
-            Future Trading
-          </h1>
-        </div>
+            <h1 className="flex items-center text-center justify-center text-white text-5xl font-bold drop-shadow-lg">
+              Future Trading
+            </h1>
+          </div>
 
-        {/* Optional overlay gradient for better visibility */}
-        <div className="absolute inset-0 bg-[#fdc857]/50 z-0"></div>
-      </div>
+          {/* Optional overlay gradient for better visibility */}
+          <div className="absolute inset-0 bg-[#fdc857]/50 z-0"></div>
+        </div>
         <div className="flex flex-wrap items-center gap-3 py-4 text-sm mx-2">
           {/* Language Dropdown */}
           <div className="relative">
@@ -197,8 +196,8 @@ const Market = () => {
 
           {/* <BitcoinChart /> */}
         </div>
-         <div className="overflow-x-auto overflow-y-hidden no-scrollbar mt-5 mx-5">
-      <table className="w-full text-gray-700 min-w-[900px] border-collapse">
+        <div className="overflow-x-auto overflow-y-hidden no-scrollbar mt-5 mx-5">
+          {/* <table className="w-full text-gray-700 min-w-[900px] border-collapse">
         <thead>
           <tr className="bg-[#393518] text-white h-[65px] border-b-8 border-[#d9d9d9]">
             <th className="px-2 py-2">Time</th>
@@ -246,8 +245,8 @@ const Market = () => {
             </tr>
           ))}
         </tbody>
-      </table>
-    </div>
+      </table> */}
+        </div>
       </div>
     </DashboardLayout>
   );

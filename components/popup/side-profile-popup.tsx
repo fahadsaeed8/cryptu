@@ -1,10 +1,11 @@
 "use client";
 
 import React from "react";
-import { List, Lock, Settings, LogOut } from "lucide-react";
+import { Settings, Lock, LogOut, List } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import ReactPopUp from "../common/react-popup";
+import { useRouter } from "next/navigation";
 
 const SideProfilePopUp = () => {
   const menuItems = [
