@@ -32,7 +32,7 @@ const SideProfilePopUp = () => {
 
   const popupContent = (close: () => void) => (
     <div className="w-[260px] rounded-[4px] shadow-lg bg-white border border-gray-200 mt-4 overflow-hidden">
-      <div className="px-4 py-2 border-b border-b-gray-300 font-semibold text-sm">
+      <div className="px-4 py-2 font-semibold text-sm">
         Account
       </div>
       <div>
@@ -41,7 +41,7 @@ const SideProfilePopUp = () => {
             key={item.id}
             href={item.link}
             onClick={close}
-            className="flex items-center gap-3 px-4 py-2 transition-colors duration-150 cursor-pointer border-b border-b-gray-300 hover:bg-gray-100 text-black"
+            className="flex items-center gap-3 px-4 py-2 transition-colors duration-150 cursor-pointer hover:bg-gray-100 text-black"
           >
             <div className="min-w-10 max-w-10 min-h-10 max-h-10 bg-gray-600 rounded-full flex justify-center items-center">
               {item.icon}
