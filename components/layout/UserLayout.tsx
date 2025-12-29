@@ -6,18 +6,18 @@ import React from "react";
 
 export default function UserLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex bg-[#F1F1F1] min-h-screen">
+    <div className="flex min-h-auto">
       {/* Sidebar */}
       <Sidebar />
 
       {/* Main Content */}
-      <div className="flex-1">
+      <div className="w-full flex flex-col overflow-x-hidden">
         <Navbar />
 
         {/* Page Content */}
-        <div className="p-5">
+        <main className="w-full h-[calc(100vh-65px)] p-5 overflow-y-auto scrollbar-hide overflow-x-hidden bg-[#F1F1F1]">
           {children}
-        </div>
+        </main>
       </div>
     </div>
   );

@@ -80,7 +80,7 @@ export default function ChangePasswordPage() {
                 value={formData.currentPassword}
                 onChange={handleInputChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#febd69] focus:border-transparent"
                 placeholder="Enter your current password"
               />
             </div>
@@ -98,7 +98,7 @@ export default function ChangePasswordPage() {
                 value={formData.newPassword}
                 onChange={handleInputChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#febd69] focus:border-transparent"
                 placeholder="Enter your new password"
               />
             </div>
@@ -119,7 +119,7 @@ export default function ChangePasswordPage() {
                 value={formData.confirmPassword}
                 onChange={handleInputChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#febd69] focus:border-transparent"
                 placeholder="Confirm your new password"
               />
             </div>
@@ -129,7 +129,7 @@ export default function ChangePasswordPage() {
           <div className="flex gap-3 pt-4">
             <button
               type="submit"
-              className="flex-1 bg-blue-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-700 transition duration-200"
+              className="flex-1 bg-[#febd69] text-black px-6 py-3 rounded-md font-semibold hover:bg-[#f5a82d] transition duration-200 cursor-pointer hover:shadow-md"
             >
               Update Password
             </button>
@@ -142,7 +142,7 @@ export default function ChangePasswordPage() {
                   confirmPassword: "",
                 })
               }
-              className="flex-1 bg-gray-300 text-gray-700 px-6 py-3 rounded-md font-semibold hover:bg-gray-400 transition duration-200"
+              className="flex-1 bg-gray-300 text-gray-700 px-6 py-3 rounded-md font-semibold hover:bg-gray-400 transition duration-200 cursor-pointer hover:shadow-md"
             >
               Cancel
             </button>
@@ -150,8 +150,8 @@ export default function ChangePasswordPage() {
         </form>
 
         {/* Info Box */}
-        <div className="mt-8 bg-blue-50 border border-blue-200 rounded-md p-4">
-          <p className="text-sm text-blue-800 font-medium">
+        <div className="mt-8 bg-yellow-50 border border-yellow-200 rounded-md p-4">
+          <p className="text-sm text-yellow-800 font-medium">
             ✓ For your security, use a strong password with a mix of uppercase, lowercase, numbers and special characters
           </p>
         </div>
