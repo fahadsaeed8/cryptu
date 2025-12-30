@@ -5,22 +5,19 @@ import { Settings, Lock, LogOut, List } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import ReactPopUp from "../common/react-popup";
-import { useRouter } from "next/navigation";
 
 const SideProfilePopUp = () => {
   const menuItems = [
     {
       id: 1,
       label: "Account Settings",
-      description: "Manage your account",
-      icon: <Settings size={16} className="text-white" />,
+      icon: <Settings size={16} className="text-blue-600" />,
       link: "/account-setting",
     },
     {
       id: 2,
       label: "Change Password",
-      description: "Update your password",
-      icon: <Lock size={16} className="text-white" />,
+      icon: <Lock size={16} className="text-blue-600" />,
       link: "/change-password",
     },
   ];
@@ -31,48 +28,57 @@ const SideProfilePopUp = () => {
   };
 
   const popupContent = (close: () => void) => (
-    <div className="w-[260px] rounded-[4px] shadow-lg bg-white border border-gray-200 mt-4 overflow-hidden">
-      <div className="px-4 py-2 font-semibold text-sm">
-        Account
-      </div>
-      <div>
-        {menuItems.map((item) => (
-          <Link
-            key={item.id}
-            href={item.link}
-            onClick={close}
-            className="flex items-center gap-3 px-4 py-2 transition-colors duration-150 cursor-pointer hover:bg-gray-100 text-black"
-          >
-            <div className="min-w-10 max-w-10 min-h-10 max-h-10 bg-gray-600 rounded-full flex justify-center items-center">
-              {item.icon}
-            </div>
-            <div className="flex flex-col text-xs">
-              <span className="font-medium">{item.label}</span>
-              <span className="text-gray-500 font-normal">{item.description}</span>
-            </div>
-          </Link>
-        ))}
-        <button
-          onClick={() => {
-            close();
-            handleLogout();
-          }}
-          className="flex items-center gap-3 px-4 py-2 transition-colors duration-150 cursor-pointer w-full hover:bg-gray-100 text-red-600 font-medium"
+    <div className="w-[240px] rounded-[8px] shadow-lg bg-white border border-gray-100 mt-4 overflow-hidden">
+      {menuItems.map((item) => (
+        <Link
+          key={item.id}
+          href={item.link}
+          onClick={close}
+          className="
+            flex items-center gap-3 px-4 py-3
+            transition-colors duration-150 cursor-pointer
+            border-b border-gray-100
+            hover:bg-blue-50
+            text-black
+            outline-none focus:outline-none focus:ring-0
+          "
         >
-          <div className="min-w-10 max-w-10 min-h-10 max-h-10 bg-gray-600 rounded-full flex justify-center items-center text-white">
-            <LogOut size={16} />
+          <div className="min-w-9 max-w-9 min-h-9 max-h-9 bg-blue-100 rounded-full flex justify-center items-center">
+            {item.icon}
           </div>
-          <span className="text-xs">Logout</span>
-        </button>
-      </div>
+
+          <span className="text-xs font-medium text-gray-800">
+            {item.label}
+          </span>
+        </Link>
+      ))}
+
+      <button
+        onClick={() => {
+          close();
+          handleLogout();
+        }}
+        className="
+          flex items-center gap-3 px-4 py-3 w-full
+          transition-colors duration-150 cursor-pointer
+          hover:bg-red-50
+          text-red-600 font-medium
+          outline-none focus:outline-none focus:ring-0
+        "
+      >
+        <div className="min-w-9 max-w-9 min-h-9 max-h-9 bg-red-100 rounded-full flex justify-center items-center">
+          <LogOut size={16} />
+        </div>
+        <span className="text-xs">Logout</span>
+      </button>
     </div>
   );
 
   return (
     <ReactPopUp popupContent={popupContent}>
       <Image
-        className="cursor-pointer"
-        src={"/Vector.svg"}
+        className="cursor-pointer outline-none focus:outline-none"
+        src="/Vector.svg"
         width={10}
         height={10}
         alt="profile menu icon"
